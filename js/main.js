@@ -25,22 +25,7 @@ $(document).ready(function(){
 
 
 
-	
-	//code for the background slider
-	$.backstretch([
-      "img/bg_img.jpg",
-      "img/bg_img2.jpg",
-      "img/bg_img3.jpg"
-    ], {
-        fade: 750,
-        duration: 2500
-    });
 
-
-
-
-
-	
  	//code for the cerlces Countdouwn
 	$(".counter").TimeCircles({
 	    "direction": "Clockwise",
@@ -77,7 +62,7 @@ $(document).ready(function(){
 
 
 
-	
+
 	//To show loading icon on form submit
 	$('#sub_form').submit(function(){
 			submit_icons('icon', 'loading');
@@ -89,7 +74,7 @@ $(document).ready(function(){
 		    callback: bcFunction
 		});
 	}
-	
+
 
 	//Mail chimp callback function
 	function bcFunction (resp) {
@@ -113,14 +98,14 @@ $(document).ready(function(){
     function show_tooltip(msg){
 
     	if ($(".tooltip").length){
-	    	$(".tooltip").remove(); 
+	    	$(".tooltip").remove();
 	    }
 
         $('.subscription_form').append('<span class="tooltip"></span>');
-        
+
         var tooltip = $(".tooltip");
         tooltip.append(msg);
-         
+
         var tipwidth = tooltip.outerWidth();
         var a_width = $('.subscription_form').width();
         var a_hegiht = $('.subscription_form').height() + 10;
@@ -136,13 +121,13 @@ $(document).ready(function(){
         setTimeout(function(){
         	hide_tooltip();
         }, 2000);
-       
+
 	}
 
 	//Hide ToolTip
 	function hide_tooltip(){
 
-		var tooltip = $(".tooltip"); 
+		var tooltip = $(".tooltip");
 		 tooltip.animate({
             opacity : 0
         }, 300, function(){
